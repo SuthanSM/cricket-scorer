@@ -1,0 +1,122 @@
+<html lang="en">
+    <head>
+  <title>Project Homepage</title>
+</head>
+<style>
+#outercontainer{
+    width:820px;
+    height:1200px;
+    background-color:orange;
+}
+
+#header{
+        width: 300px;
+        height: 60px;
+        margin: 0 auto;
+    color:red;
+    font-size:40pt;
+}
+
+#drop-nav{
+    margin-right: 40px;
+    display: block;
+    width: 800px;
+    height: 30px;
+    background-color: black;
+}
+
+a{
+    display: block;
+    margin-right: 80px;
+  }
+
+ ul{
+    list-style: none;
+    padding: 0px;
+    margin-right: 40px;
+  }
+
+  ul li{
+    display: block;
+    position: relative;
+    float: left;
+    border:1px solid blue;
+    }
+
+  li ul{
+    display: none;
+  }
+
+  ul li a{
+    display: block;
+    background: #000;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+  }
+
+  ul li a:hover{
+    background: blue;
+  }
+
+  li:hover ul{
+    display: block;
+    position: absolute;
+  }
+
+  li:hover li{
+    float: none;
+  }
+
+  li:hover a{
+    background: #f00;
+  }
+
+  li:hover li a:hover{
+    background: #000;
+  }
+
+  #drop-nav li ul li{
+    border-top: 0px;
+  }
+</style>
+
+<body>
+  <div id="outercontainer">
+    <div id="header">
+      LA SPORTS
+    </div>
+
+    <div id="navbar">
+        <ul id="drop-nav">
+    <li><a href="#">NBA</a>
+    <ul>
+      <li><a href="nba.html" target="_blank">Lakers</a></li>
+      <li><a href="nba.html" target="_blank">Clippers</a></li>
+    </ul>
+  </li>
+  <li><a href="#">MLB</a>
+    <ul>
+      <li><a href="#">Angels</a></li>
+      <li><a href="#">Dodgers</a></li>
+    </ul>
+  </li>
+  <li><a href="#">NHL</a>
+    <ul>
+      <li><a href="#">Kings</a></li>
+
+    </ul>
+  </li>
+
+  <li><a href="#">NFL</a>
+    <ul>
+      <li><a href="#">Past Teams</a></li>
+
+    </ul>
+  </li>
+</ul>
+    </div>
+  </div>
+</body>
+</html>

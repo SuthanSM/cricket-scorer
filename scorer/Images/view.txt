@@ -1,0 +1,3 @@
+$sql1=mysqli_query($conn,"create view v as select DISTINCT m.mno,m.result,b.balls,bo.runs boruns,t.total_score,t.wickets as twickets,t.tname,p.pid,b.runs,bo.wickets from matches m,teams t,batting b,bowling bo,player p where (b.runs, p.pid) in (select max(b.runs),b.pid from batting b,player p where p.pid=b.pid group by p.tname
+) and (bo.wickets, p.pid) in (select max(bo.wickets),bo.pid from bowling bo,player p where p.pid=bo.pid group by p.tname
+) and t.tname=p.tname and m.mno=t.mno") or die(mysqli_error($conn));
